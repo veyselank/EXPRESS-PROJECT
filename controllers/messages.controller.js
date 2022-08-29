@@ -1,4 +1,4 @@
-function getMessages(req,res) {
+function getMessage(req,res) {
     res.send('<ul><li>Hello Lone Wolf!</li></ul>');
 };
 
@@ -7,6 +7,6 @@ function postMessage(req,res){
 }
 
 module.exports = {
-    getMessages,
+    getMessage,
     postMessage,
 };
