@@ -55,13 +55,9 @@ app.get('/friends/:friendId', (req,res) => {
     }
 });
 
-app.get('/messages', (req,res) =>{
-    res.send('<ul><li>Hello Lone Wolf!</li></ul>');
-});
+app.get('/messages', );
 
-app.get('/messages', (req,res) =>{
-    console.log('Updating messages...');
-});
+app.get('/messages', );
 
 app.listen(PORT, () => {
     console.log(`Listening on ${PORT}...`)
