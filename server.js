@@ -7,16 +7,7 @@ const app = express();
 
 const PORT = 3000;
 
-const friends = [
-    {
-        id: 0,
-        name: 'Ray Dalio'
-    },
-    {
-        id: 1,
-        name: 'Steve Jobs'
-    }
-];
+
 
 app.use((req,res,next) => {
     const start = Date.now();
@@ -28,13 +19,10 @@ app.use((req,res,next) => {
 app.use(express.json());
 
 app.post('/friends', friendsController.postFriend);
-
 app.get('/friends', friendsController.getFriends);
-
 app.get('/friends/:friendId', friendsController.getFriend);
 
 app.get('/messages', messagesController.getMessage);
-
 app.post('/messages', messagesController.postMessage);
 
 app.listen(PORT, () => {
