@@ -27,11 +27,11 @@ app.use((req,res,next) => {
 
 app.use(express.json());
 
-app.post('/friends', );
+app.post('/friends', friendsController.postFriend);
 
-app.get('/friends', );
+app.get('/friends', friendsController.getFriends);
 
-app.get('/friends/:friendId', );
+app.get('/friends/:friendId', friendsController.getFriend);
 
 app.get('/messages', messagesController.getMessage);
 
