@@ -2,11 +2,12 @@ const path = require('path');
 const express = require('express');
 
 const friendsRouter = require('./routes/friends.router');
-
-
 const messagesRouter = require('./routes/messages.router');
 
 const app = express();
+
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'));
 
 const PORT = 3000;
 
